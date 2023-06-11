@@ -1,0 +1,54 @@
+[
+  {
+    "url": "https://http.cat/images/100.jpg",
+    "name": "100 Continue"
+  },
+  {
+    "url": "https://http.cat/images/101.jpg",
+    "name": "101 Switching Protocols"
+  },
+  {
+    "url": "https://http.cat/images/102.jpg",
+    "name": "102 Processing"
+  },
+  {
+    "url": "https://http.cat/images/103.jpg",
+    "name": "103 Early Hints"
+  },
+  {
+    "url": "https://http.cat/images/200.jpg",
+    "name": "200 OK"
+  },
+  {
+    "url": "https://http.cat/images/201.jpg",
+    "name": "201 Created"
+  },
+  {
+    "url": "https://http.cat/images/202.jpg",
+    "name": "202 Accepted"
+  },
+  {
+    "url": "https://http.cat/images/203.jpg",
+    "name": "203 Non-Authoritative"
+  },
+  {
+    "url": "https://http.cat/images/204.jpg",
+    "name": "204 No Content"
+  },
+  {
+    "url": "https://http.cat/images/206.jpg",
+    "name": "206 Partial Content"
+  },
+  {
+    "url": "https://http.cat/images/207.jpg",
+    "name": "207 Multi-Status"
+  },
+  {
+    "url": "https://http.cat/images/300.jpg",
+    "name": "300 Multiple Choices"
+  },
+  {
+    "url": "https://http.cat/images/301.jpg",
+    "name": "301 Moved Permanently"
+  }
+]

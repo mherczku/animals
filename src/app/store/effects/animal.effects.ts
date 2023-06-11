@@ -3,7 +3,7 @@ import {Actions, createEffect, ofType} from "@ngrx/effects";
 import {catchError, exhaustMap, map, of, tap, TimeoutError} from "rxjs";
 import * as actions from '../actions/animal.actions';
 import {HotToastService} from "@ngneat/hot-toast";
-import {AnimalService} from "../../service/animal.service";
+import {AnimalService} from "../../service/animal/animal.service";
 
 @Injectable()
 export class AnimalEffects {

@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {animalLoad} from "../../../store/actions/animal.actions";
-import {Store} from "@ngrx/store";
 import {AnimalGridComponent} from "../../components/animal-grid/animal-grid.component";
+import {AnimalBaseComponent} from "../animal-base.component";
 
 @Component({
   selector: 'app-dogs',
@@ -11,12 +11,9 @@ import {AnimalGridComponent} from "../../components/animal-grid/animal-grid.comp
   templateUrl: './dogs.component.html',
   styleUrls: ['./dogs.component.scss']
 })
-export class DogsComponent implements OnInit {
-
-  constructor(private store: Store) {
-  }
-
+export class DogsComponent extends AnimalBaseComponent implements OnInit {
   ngOnInit(): void {
     this.store.dispatch(animalLoad({animalType: "dogs"}))
   }
+
 }
