@@ -7,25 +7,30 @@ import {CatsComponent} from "./ui/pages/cats/cats.component";
 import {MiceComponent} from "./ui/pages/mice/mice.component";
 
 const routes: Routes = [
-  {path: "", component: HomeComponent},
+
+  {path: "", data: {animation: "home"}, title: "Animals", component: HomeComponent},
 
   {
     path: "dogs",
-    loadComponent: () => import("./ui/pages/dogs/dogs.component").then(_c => DogsComponent)
+    title: "Animals - Dogs",
+    data: {animation: "dogs"},
+    loadComponent: () => import("./ui/pages/dogs/dogs.component").then(c => DogsComponent)
   },
-
   {
     path: "cats",
+    title: "Animals - Cats",
+    data: {animation: "cats"},
     canMatch: [() => inject(CatRestrictionService).checkCatAvailableAndWarn()],
-    loadComponent: () => import("./ui/pages/cats/cats.component").then(_c => CatsComponent)
+    loadComponent: () => import("./ui/pages/cats/cats.component").then(c => CatsComponent)
   },
   {
     path: "mice",
-    loadComponent: () => import("./ui/pages/mice/mice.component").then(_c => MiceComponent)
+    title: "Animals - Mice",
+    data: {animation: "mice"},
+    loadComponent: () => import("./ui/pages/mice/mice.component").then(c => MiceComponent)
   },
 
   {path: "**", redirectTo: ""},
-
 ];
 
 @NgModule({
