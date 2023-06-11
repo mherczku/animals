@@ -7,6 +7,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {HotToastModule} from "@ngneat/hot-toast";
 import {StoreModule} from "@ngrx/store";
 import {animalReducer} from "./store/reducers/animal.reducer";
+import {EffectsModule} from "@ngrx/effects";
+import {AnimalEffects} from "./store/effects/animal.effects";
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import {animalReducer} from "./store/reducers/animal.reducer";
     HotToastModule.forRoot(),
     StoreModule.forRoot(),
     StoreModule.forFeature("animals", animalReducer),
+    EffectsModule.forRoot([AnimalEffects]),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
