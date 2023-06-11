@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {CatRestrictionService} from "../../../service/cat-restriction/cat-restriction.service";
@@ -8,7 +8,8 @@ import {CatRestrictionService} from "../../../service/cat-restriction/cat-restri
   standalone: true,
   imports: [CommonModule, RouterLink, RouterLinkActive, NgOptimizedImage],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarComponent {
 

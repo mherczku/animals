@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {AnimalBaseComponent} from "../animal-base.component";
 import {animalLoad} from "../../../store/actions/animal.actions";
 import {CatRestrictionService} from "../../../service/cat-restriction/cat-restriction.service";
@@ -10,7 +10,8 @@ import {AnimalGridComponent} from "../../components/animal-grid/animal-grid.comp
   standalone: true,
   imports: [CommonModule, AnimalGridComponent],
   templateUrl: './mice.component.html',
-  styleUrls: ['./mice.component.scss']
+  styleUrls: ['./mice.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MiceComponent extends AnimalBaseComponent implements OnInit {
 

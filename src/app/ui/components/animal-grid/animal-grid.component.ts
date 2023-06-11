@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {AnimalCardComponent} from "../animal-card/animal-card.component";
 import {Store} from "@ngrx/store";
 import {selectAnimals} from "../../../store/selectors/animal.selector";
@@ -9,7 +9,8 @@ import {selectAnimals} from "../../../store/selectors/animal.selector";
   standalone: true,
   imports: [CommonModule, AnimalCardComponent],
   templateUrl: './animal-grid.component.html',
-  styleUrls: ['./animal-grid.component.scss']
+  styleUrls: ['./animal-grid.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AnimalGridComponent {
 

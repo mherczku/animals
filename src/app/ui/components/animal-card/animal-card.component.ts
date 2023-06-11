@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Animal} from "../../../interface/animal";
 
@@ -7,7 +7,8 @@ import {Animal} from "../../../interface/animal";
   standalone: true,
   imports: [CommonModule],
   templateUrl: './animal-card.component.html',
-  styleUrls: ['./animal-card.component.scss']
+  styleUrls: ['./animal-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AnimalCardComponent {
   @Input({required: true}) animal: Animal = {

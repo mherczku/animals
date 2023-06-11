@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {animalLoad} from "../../../store/actions/animal.actions";
 import {AnimalGridComponent} from "../../components/animal-grid/animal-grid.component";
@@ -9,7 +9,8 @@ import {AnimalBaseComponent} from "../animal-base.component";
   standalone: true,
   imports: [CommonModule, AnimalGridComponent],
   templateUrl: './dogs.component.html',
-  styleUrls: ['./dogs.component.scss']
+  styleUrls: ['./dogs.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DogsComponent extends AnimalBaseComponent implements OnInit {
   ngOnInit(): void {
