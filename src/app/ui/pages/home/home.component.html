@@ -1,0 +1,10 @@
+<main>
+  <h1 class="text-5xl font-extrabold text-center m-2">Dogs, Cats and Mice</h1>
+
+  <section class="flex justify-center">
+    <div class="m-4 max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <app-animal-card [routerLink]="'/' + type.name | lowercase"  [animal]="type"
+                       *ngFor="let type of animalTypes"></app-animal-card>
+    </div>
+  </section>
+</main>
