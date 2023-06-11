@@ -10,7 +10,7 @@ import {Animal} from "../../../interface/animal";
   styleUrls: ['./animal-card.component.scss']
 })
 export class AnimalCardComponent {
-  @Input() animal: Animal = {
+  @Input({required: true}) animal: Animal = {
     url: "assets/image/mouse1.png",
     name: "Example Animal"
   }
