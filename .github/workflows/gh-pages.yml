@@ -3,8 +3,7 @@ name: GitHub Pages
 on:
   push:
     branches:
-    - main
-    - pwa
+    - master
 
 jobs:
   deploy:
@@ -19,11 +18,9 @@ jobs:
         node-version: '16'
 
     - name: Install dependencies
-      working-directory: ./frontend
       run: npm install
 
     - name: Build
-      working-directory: ./frontend
       run: npm run build:prod
 
     - name: Deploy
@@ -31,5 +28,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: frontend/dist/szititour
+        publish_dir: dist/animals
         enable_jekyll: true
