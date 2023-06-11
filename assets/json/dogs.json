@@ -1,0 +1,34 @@
+[
+  {
+    "url": "https://images.dog.ceo/breeds/shiba/shiba-11.jpg",
+    "name": "Shiba Inu"
+  },
+  {
+    "url": "https://images.dog.ceo/breeds/frise-bichon/5.jpg",
+    "name": "Bichon"
+  },
+  {
+    "url": "https://images.dog.ceo/breeds/mountain-swiss/n02107574_2335.jpg",
+    "name": "Swiss Mountain"
+  },
+  {
+    "url": "https://images.dog.ceo/breeds/retriever-golden/n02099601_5453.jpg",
+    "name": "Golden Retriever"
+  },
+  {
+    "url": "https://images.dog.ceo/breeds/akita/512px-Akita_inu.jpg",
+    "name": "Akita Inu"
+  },
+  {
+    "url": "https://images.dog.ceo/breeds/mountain-bernese/n02107683_3988.jpg",
+    "name": "Bernese Mountain"
+  },
+  {
+    "url": "https://images.dog.ceo/breeds/collie-border/n02106166_3416.jpg",
+    "name": "Border Collie"
+  },
+  {
+    "url": "https://images.dog.ceo/breeds/terrier-russell/jack1.jpg",
+    "name": "Russell Terrier"
+  }
+]
