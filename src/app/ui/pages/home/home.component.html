@@ -3,7 +3,8 @@
 
   <section class="flex justify-center">
     <div class="m-4 max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <app-animal-card [routerLink]="'/' + type.name | lowercase"  [animal]="type"
+      <app-animal-card [routerLink]="'/' + type.name | lowercase"
+                       [class.cursor-pointer]="type.name !== 'Cats' || (isCatAvailable$ | async)" [animal]="type"
                        *ngFor="let type of animalTypes"></app-animal-card>
     </div>
   </section>
