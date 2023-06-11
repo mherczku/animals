@@ -9,6 +9,7 @@ import {StoreModule} from "@ngrx/store";
 import {animalReducer} from "./store/reducers/animal.reducer";
 import {EffectsModule} from "@ngrx/effects";
 import {AnimalEffects} from "./store/effects/animal.effects";
+import {NavbarComponent} from "./ui/components/navbar/navbar.component";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {AnimalEffects} from "./store/effects/animal.effects";
     StoreModule.forRoot(),
     StoreModule.forFeature("animals", animalReducer),
     EffectsModule.forRoot([AnimalEffects]),
+    NavbarComponent,
 
   ],
   providers: [],
