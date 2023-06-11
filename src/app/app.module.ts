@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {HttpClientModule} from "@angular/common/http";
+import {HotToastModule} from "@ngneat/hot-toast";
+import {StoreModule} from "@ngrx/store";
+import {animalReducer} from "./store/reducers/animal.reducer";
 
 @NgModule({
   declarations: [
@@ -10,7 +14,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HotToastModule.forRoot(),
+    StoreModule.forRoot(),
+    StoreModule.forFeature("animals", animalReducer),
   ],
   providers: [],
   bootstrap: [AppComponent]

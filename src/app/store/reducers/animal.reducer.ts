@@ -20,7 +20,7 @@ export const animalReducer = createReducer(
     }
   )),
 
-  on(actions.animalLoadFailure, (state, {errorMessage}) => (
+  on(actions.animalLoadFailure, (state) => (
     {
       ...state,
       animals: [],
