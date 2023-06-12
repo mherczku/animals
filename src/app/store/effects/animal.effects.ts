@@ -34,7 +34,12 @@ export class AnimalEffects {
           }),
 
           // Close loader when done
-          finalize(() => this.toast.close("dataLoader")),
+          finalize(() => {
+            // timeout - without it "fast connection" only see a flash of the loader
+            setTimeout(()=> {
+              this.toast.close("dataLoader")
+            }, 300)
+          }),
 
           // to prevent memory leaks
           takeUntil(this.actions$.pipe(

@@ -14,3 +14,8 @@ li {
     }
   }
 }
+
+a {
+  // on mobile no blue background when clicked
+  -webkit-tap-highlight-color: transparent;
+}
