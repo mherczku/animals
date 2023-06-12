@@ -21,7 +21,7 @@ export class AnimalEffects {
 
       // Hot Toast Loader:
       tap(action => {
-        this.toast.loading(`Loading ${action.animalType}...`, {id: "dataLoader"});
+        this.toast.loading(`Loading ${action.animalType}...`, {id: "dataLoader", position: "top-center"});
       }),
       exhaustMap(action =>
         this.animalService.getAnimals(action.animalType).pipe(
@@ -36,7 +36,7 @@ export class AnimalEffects {
           // Close loader when done
           finalize(() => {
             // timeout - without it "fast connection" only see a flash of the loader
-            setTimeout(()=> {
+            setTimeout(() => {
               this.toast.close("dataLoader")
             }, 300)
           }),

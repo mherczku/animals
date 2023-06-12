@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {HotToastModule} from "@ngneat/hot-toast";
 import {StoreModule} from "@ngrx/store";
@@ -20,7 +20,10 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HotToastModule.forRoot(),
+    HotToastModule.forRoot({
+      dismissible: true,
+      position: "bottom-center"
+    }),
     StoreModule.forRoot(),
     StoreModule.forFeature("animals", animalReducer),
     EffectsModule.forRoot([AnimalEffects]),
@@ -30,4 +33,5 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
