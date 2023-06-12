@@ -18,6 +18,7 @@ Default HomePage + 3 pages: Dogs, Cats and Mice
 * Lazy loading
 * OnPush change detection
 * Route Animations
+* CI/CD - with GitHub workflow
 
 ## Development server
 
