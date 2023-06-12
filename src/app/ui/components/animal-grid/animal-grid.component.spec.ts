@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AnimalGridComponent } from './animal-grid.component';
+import {StoreModule} from "@ngrx/store";
 
 describe('AnimalGridComponent', () => {
   let component: AnimalGridComponent;
@@ -8,7 +9,7 @@ describe('AnimalGridComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [AnimalGridComponent]
+      imports: [AnimalGridComponent, StoreModule.forRoot()]
     });
     fixture = TestBed.createComponent(AnimalGridComponent);
     component = fixture.componentInstance;

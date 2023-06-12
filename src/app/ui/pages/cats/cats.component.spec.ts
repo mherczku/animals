@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CatsComponent } from './cats.component';
+import {StoreModule} from "@ngrx/store";
 
 describe('CatsComponent', () => {
   let component: CatsComponent;
@@ -8,7 +9,7 @@ describe('CatsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CatsComponent]
+      imports: [CatsComponent, StoreModule.forRoot()]
     });
     fixture = TestBed.createComponent(CatsComponent);
     component = fixture.componentInstance;

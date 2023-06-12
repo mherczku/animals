@@ -6,7 +6,7 @@ import {CatRestrictionService} from "./service/cat-restriction/cat-restriction.s
 import {CatsComponent} from "./ui/pages/cats/cats.component";
 import {MiceComponent} from "./ui/pages/mice/mice.component";
 
-const routes: Routes = [
+export const routes: Routes = [
 
   {path: "", data: {animation: "home"}, title: "Animals", component: HomeComponent},
 
