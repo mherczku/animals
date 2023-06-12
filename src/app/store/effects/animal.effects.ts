@@ -41,7 +41,7 @@ export class AnimalEffects {
             ofType(actions.animalLoadCancel)
           )),
 
-          catchError((error: any) => {
+          catchError((error: Error) => {
             if (error instanceof TimeoutError) {
               return of(actions.animalLoadFailure({errorMessage: "Network Timeout"}))
             }

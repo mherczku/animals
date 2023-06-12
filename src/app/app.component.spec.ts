@@ -48,7 +48,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
 
-    let router = TestBed.inject(Router);
+    const router = TestBed.inject(Router);
 
     expect(router.url).toEqual('/');
   });
@@ -58,7 +58,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
 
-    let router = TestBed.inject(Router);
+    const router = TestBed.inject(Router);
     await router.navigateByUrl('/cats')
 
     expect(router.url).toEqual('/');
@@ -69,7 +69,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
 
-    let router = TestBed.inject(Router);
+    const router = TestBed.inject(Router);
     await router.navigateByUrl('/mice')
     fixture.detectChanges();
     expect(router.url).toEqual('/mice');
@@ -85,7 +85,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
 
-    let router = TestBed.inject(Router);
+    const router = TestBed.inject(Router);
     await router.navigateByUrl('/bad-url')
     fixture.detectChanges();
     expect(router.url).toEqual('/');

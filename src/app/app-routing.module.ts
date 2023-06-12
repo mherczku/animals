@@ -14,20 +14,20 @@ export const routes: Routes = [
     path: "dogs",
     title: "Animals - Dogs",
     data: {animation: "dogs"},
-    loadComponent: () => import("./ui/pages/dogs/dogs.component").then(_c => DogsComponent)
+    loadComponent: () => import("./ui/pages/dogs/dogs.component").then(() => DogsComponent)
   },
   {
     path: "cats",
     title: "Animals - Cats",
     data: {animation: "cats"},
     canMatch: [() => inject(CatRestrictionService).checkCatAvailableAndWarn()],
-    loadComponent: () => import("./ui/pages/cats/cats.component").then(_c => CatsComponent)
+    loadComponent: () => import("./ui/pages/cats/cats.component").then(() => CatsComponent)
   },
   {
     path: "mice",
     title: "Animals - Mice",
     data: {animation: "mice"},
-    loadComponent: () => import("./ui/pages/mice/mice.component").then(_c => MiceComponent)
+    loadComponent: () => import("./ui/pages/mice/mice.component").then(() => MiceComponent)
   },
 
   {path: "**", redirectTo: ""},
