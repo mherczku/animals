@@ -7,22 +7,22 @@ import {HotToastService} from "@ngneat/hot-toast";
 })
 export class CatRestrictionService {
 
-  private isCatAvailable: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false)
+  private isCatAvailable$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false)
   constructor(private readonly toast: HotToastService) {}
 
   makeCatsAvailable() {
-    if(!this.isCatAvailable.value) {
-      this.isCatAvailable.next(true);
+    if(!this.isCatAvailable$.value) {
+      this.isCatAvailable$.next(true);
     }
   }
 
   watchCatAvailable(): Observable<boolean> {
-    return this.isCatAvailable.asObservable();
+    return this.isCatAvailable$.asObservable();
   }
   checkCatAvailableAndWarn(): boolean {
-    if(!this.isCatAvailable.value) {
+    if(!this.isCatAvailable$.value) {
       this.toast.warning("Cats are not available before watching mice!")
     }
-    return this.isCatAvailable.value;
+    return this.isCatAvailable$.value;
   }
 }

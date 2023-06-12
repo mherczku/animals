@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {AnimalCardComponent} from "../animal-card/animal-card.component";
 import {Store} from "@ngrx/store";
 import {selectAnimals} from "../../../store/selectors/animal.selector";
+import {tap} from "rxjs";
 
 @Component({
   selector: 'app-animal-grid',
@@ -14,7 +15,11 @@ import {selectAnimals} from "../../../store/selectors/animal.selector";
 })
 export class AnimalGridComponent {
 
-  animals = this.store.select(selectAnimals);
+  count = 0;
+  animals$ = this.store.select(selectAnimals).pipe(tap(animals => {
+      this.count = animals.length
+    }
+  ))
 
   constructor(private readonly store: Store) {
   }
