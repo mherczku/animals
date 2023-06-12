@@ -35,3 +35,5 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 * "can navigate to cats after mice"
 * "should navigate to default page on bad url"
 
+![Screenshot from 2023-06-12 09-35-21](https://github.com/mherczku/animals/assets/61518890/24473b62-616b-4313-ac2a-1b946e5b148f)
+
