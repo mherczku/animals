@@ -8,6 +8,7 @@
     "build:prod": "ng build --configuration production --base-href https://mherczku.github.io/animals/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:prod": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
     "deploy": "ng build --configuration=production --base-href https://mherczku.github.io/animals/ && angular-cli-ghpages --dir=dist/animals --branch gh-pages",
     "lint": "ng lint"
   },
