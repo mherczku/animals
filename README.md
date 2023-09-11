@@ -9,7 +9,7 @@ Default HomePage + 3 pages: Dogs, Cats and Mice
 
 ## Packages:
 * NgRx Store + Effects for state management
-* NgNeat HotToast for toast notifications
+* NgNeat HotToast for Toast notifications
 * Tailwind - CSS framework for styling and responsiveness
 * EsLint
 
